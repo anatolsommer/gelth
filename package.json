@@ -1,0 +1,30 @@
+{
+  "name": "gelth",
+  "description": "tail -f and -n",
+  "version": "0.0.1-alpha",
+  "license": "MIT",
+  "author": "Anatol Sommer <anatol@anatol.at>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anatolsommer/gelth.git"
+  },
+  "keywords": [
+    "tail",
+    "file",
+    "follow",
+    "forever",
+    "last",
+    "lines"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "~2.1.0",
+    "jshint": "^2.9.1"
+  },
+  "scripts": {
+    "jshint": "jshint --show-non-errors lib/* && echo 'No errors!\n' ; set $?=0",
+    "test": "mocha --check-leaks test/test.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha test/test.js"
+  }
+}
