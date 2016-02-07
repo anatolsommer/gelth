@@ -1,7 +1,7 @@
 {
   "name": "gelth",
   "description": "tail -f and -n",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "license": "MIT",
   "author": "Anatol Sommer <anatol@anatol.at>",
   "repository": {
