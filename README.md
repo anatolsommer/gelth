@@ -15,10 +15,6 @@ file.on('data', function(line) {
 file.on('error', function(error) {
   console.error(error);
 });
-
-file.on('cut', function() {
-  console.log('File was cut');
-});
 ```
 
 ```js
@@ -28,21 +24,30 @@ file.on('data', function(line) {
   console.log(line);
 });
 
+file.on('error', function(error) {
+  console.error(error);
+});
+
+file.on('cut', function() {
+  console.log('File was cut');
+});
+
 setTimeout(function() {
   file.end();
 }, 3000);
 ```
 
 ### Options:
-* `lines`: (number or `false`), default=`10`
-* `follow`: (boolean), default=`false`
-* `separator`: (string), default=`'\n'`
-* `interval`: (number), ms, default=`300`
-* `buffer`: (number), bytes, default=`lines*4096` or `32768`
+* `lines`: (Number or `false`), default=`10`
+* `follow`: (Boolean), default=`false`
+* `separator`: (String), default=`'\n'`
+* `interval`: (Number), milliseconds, default=`300`
+* `buffer`: (Number), bytes, default=`lines*4096` or `32768`
 
 ### Events:
 * `data` (String line)
 * `error` (Error error)
+* `reading`
 * `cut`
 
 ### Methods:

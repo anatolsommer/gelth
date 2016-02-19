@@ -1,7 +1,7 @@
 {
   "name": "gelth",
   "description": "tail -f and -n",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Anatol Sommer <anatol@anatol.at>",
   "repository": {
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "mocha": "~2.1.0",
+    "istanbul": "^0.4.2",
     "jshint": "^2.9.1"
   },
   "scripts": {
