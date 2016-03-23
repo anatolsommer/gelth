@@ -43,6 +43,13 @@ describe('Gelth', function() {
     });
   });
 
+  it('should emit "reading" event', function(done) {
+    file=new Gelth(__dirname+'/test.txt', {lines:3, follow:true});
+    file.on('reading', function(line) {
+      done();
+    });
+  });
+
   it('should emit cut event', function(done) {
     fs.unlink(__dirname+'/test.txt');
     file.on('cut', function() {
